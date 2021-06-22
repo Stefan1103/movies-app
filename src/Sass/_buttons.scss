@@ -1,0 +1,39 @@
+%butn {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: .15rem;
+	padding: .2rem .6rem;
+	text-align: center;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $neutral-100;
+	}
+}
+
+.btn-back {
+	@extend %butn;
+	width: 15rem;
+	color: $secondaryColor;
+	background-color: $mainColor;
+	border: none;
+	font-weight: 600;
+	margin-top: 1.2rem;
+}
+.btn-search {
+	@extend %butn;
+	width: 8.5rem;
+	color: $mainColor;
+	background-color: $secondaryColor;
+	border: none;
+	font-weight: 600;
+	margin-left: 1.2rem;
+}
+
+.button-card {
+	@extend %butn;
+	text-decoration: none;
+	color: $mainColor;
+	cursor: pointer;
+	background-color: $secondaryColor;
+}

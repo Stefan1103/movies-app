@@ -1,0 +1,94 @@
+.movieDetails {
+	padding-bottom: 3rem;
+	.imgContainer {
+		overflow: hidden;
+		margin-top: .8rem;
+		img {
+			border-radius: .5rem;
+		}
+	}
+	h1 {
+		color: $neutral-100;
+		font-weight: 800;
+	}
+	.customTab {
+		margin-top: 1.5rem;
+		font-weight: 400;
+		color: $secondaryColor;
+		&:focus {
+			color: $mainColor;
+			background-color: lighten($color: $secondaryColor, $amount: 30%);
+		}
+	}
+	.tab-content {
+		color: white;
+		margin-top: 2rem;
+		max-width: 70ch;
+		h2 {
+			margin-top: 1.2rem;
+			color: $secondaryColor;
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		}
+		h3 {
+			margin-top: 1.2rem;
+			font-size: 1.5rem;
+		}
+		p {
+			color: inherit;
+			font-size: 1.8rem;
+			font-weight: 400;
+		}
+		ul {
+			padding: .2rem;
+			list-style: none;
+			li {
+				font-weight: 500;
+				font-size: 1.2rem;
+				margin-top: .15rem;
+				color: $secondaryColor;
+				h4 {
+					padding-left: .5rem;
+					display: inline;
+					font-size: 1rem;
+					font-weight: 400;
+					color: $neutral-100;
+				}
+			}
+		}
+	}
+	.ratings {
+		width: 100%;
+		margin: 0 auto;
+		.textCenter {
+			text-align: center;
+			color: $secondaryColor;
+		}
+		h2 {
+			color: lighten($color: $secondaryColor, $amount: 10%);
+			font-weight: 500;
+		}
+		h4 {
+			margin-top: .8rem;
+		}
+		.progress-util {
+			animation: anim 2s linear;
+			background-color: darken($color: $secondaryColor, $amount: 5%);
+			color: $bgmainColor;
+			font-weight: 600;
+		}
+		@keyframes anim {
+			0% {
+				width: 0;
+			}
+		}
+	}
+	.button-container {
+		margin: 1.4rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@include reducedMotion;
+}

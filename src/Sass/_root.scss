@@ -1,0 +1,22 @@
+body {
+	background: $bgmainColor;
+	.app {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.sections {
+			background-color: $bgmainColor;
+			width: 100%;
+			min-height: calc(100vh - 4.3rem);
+			flex: 1, 0, auto;
+			position: relative;
+			top: 4.3rem;
+			padding-bottom: 1.3rem;
+
+			> * {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

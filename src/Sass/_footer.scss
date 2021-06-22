@@ -1,0 +1,55 @@
+.customFooter {
+	width: 100%;
+	display: flex;
+	padding: 1rem;
+	justify-content: space-around;
+	align-items: center;
+	color: rgb(156, 154, 154);
+	background: $mainColor;
+	flex-shrink: 0;
+	z-index: 1;
+	@include smTablet {
+		flex-direction: column;
+	}
+
+	h6 {
+		font-weight: 500;
+		color: $neutral-100;
+		@include tablet {
+			display: none;
+		}
+	}
+	ul {
+		display: flex;
+		list-style: none;
+		li > * {
+			padding: .2rem;
+			color: $secondaryColor;
+			&:hover {
+				color: $neutral-100;
+			}
+		}
+	}
+	.left {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.middle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h4 {
+			color: inherit;
+			font-style: italic;
+			@include mobile {
+				font-size: 1rem;
+			}
+		}
+	}
+	.right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

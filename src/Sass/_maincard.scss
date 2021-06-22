@@ -1,0 +1,92 @@
+.customCard {
+	width: 16rem;
+	max-width: 35ch;
+	height: 24rem;
+	color: $neutral-100;
+	padding: 10rem 0 0;
+	margin: 1.9rem 1.9rem;
+	background-size: cover;
+	border-radius: .5rem;
+	overflow: hidden;
+	transition: transform .5s ease;
+
+	.card-content {
+		height: 100%;
+		--padding: 1.5rem;
+		padding: var(--padding);
+		background: linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .2) 20%, hsla(0, 0%, 0%, 1));
+		.card-title {
+			position: relative;
+			font-size: 1.2rem;
+			max-width: 100%;
+			width: max-content;
+			margin-bottom: 1.8rem;
+			&::after {
+				content: "";
+				position: absolute;
+				height: 4px;
+				left: calc(var(--padding) * -1);
+				bottom: -3px;
+				width: calc(100% + var(--padding));
+				background: $secondaryColor;
+				transform-origin: left;
+
+				transition: transform .5s ease;
+			}
+		}
+		.cardBody {
+			height: 60%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			.card-info {
+				color: inherit;
+				font-size: .9rem;
+			}
+		}
+	}
+
+	@media (hover) {
+		.card-content {
+			transform: translateY(65%);
+			transition: transform .5s ease;
+		}
+		&:hover,
+		&:focus-within {
+			transform: scale(1.05);
+		}
+		&:hover .card-content,
+		&:focus-within .card-content {
+			transform: translateY(0);
+			transition-delay: .5s;
+		}
+		&:focus-within .card-content {
+			transition-duration: 0ms;
+		}
+		.card-content > *:not(.card-title) {
+			opacity: 0;
+			transition: opacity .5s linear;
+		}
+		&:hover .card-content > *:not(.card-title),
+		&:focus-within .card-content > *:not(.card-title) {
+			opacity: 1;
+			transition-delay: .9s;
+		}
+		&:hover .card-title::after,
+		&:focus-within .card-title::after {
+			transform: scaleX(1);
+		}
+		.card-title::after {
+			transform: scaleX(0);
+		}
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+}
+
+@include reducedMotion;

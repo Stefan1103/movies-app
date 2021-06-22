@@ -1,0 +1,16 @@
+//globals
+@import "./Sass/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "./Sass/mediaGlobal";
+@import "./Sass/buttons";
+
+//custom components styles
+@import "./Sass/root";
+@import "./Sass/navbar";
+@import "./Sass/slider";
+@import "./Sass/moviedetails";
+@import "./Sass/error";
+@import "./Sass/loading";
+@import "./Sass/main";
+@import "./Sass/maincard";
+@import "./Sass/footer";
