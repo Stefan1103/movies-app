@@ -46,7 +46,7 @@ const Footer = () => {
 				<h6>Source:</h6>
 				<ul>
 					<li>
-						<a href="https://compassionate-brown-bb6b8a.netlify.app/">
+						<a href="https://github.com/Stefan1103/movies-app">
 							<GitHubIcon />
 						</a>
 					</li>
