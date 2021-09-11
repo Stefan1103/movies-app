@@ -13,7 +13,7 @@ const Footer = () => {
 				<h6>Socials:</h6>
 				<ul>
 					<li>
-						<a href="#">
+						<a href="https://www.facebook.com/stefan.stevanovski">
 							<FacebookIcon />
 						</a>
 					</li>
@@ -46,7 +46,7 @@ const Footer = () => {
 				<h6>Source:</h6>
 				<ul>
 					<li>
-						<a href="#">
+						<a href="https://compassionate-brown-bb6b8a.netlify.app/">
 							<GitHubIcon />
 						</a>
 					</li>
